@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>instances</title>
+<script>
+
+// creating outer function
+var createPet = function(name) {
+  var sex;
+  
+  return { 
+    setName: function(newName) {              //taking outer function data as parameters in inner function
+      name = newName;
+    },
+    
+    getName: function() {
+      return name;
+    },
+    
+    getSex: function() {
+      return sex;
+    },
+    
+    setSex: function(newSex) {
+      if(typeof newSex === 'string' && (newSex.toLowerCase() === 'male' || newSex.toLowerCase() === 'female')) {
+        sex = newSex;
+      }
+    }
+  }
+}
+
+var pet = createPet('Vivie');
+pet.getName();                  // Vivie
+
+pet.setName('raj');
+pet.setSex('male');
+pet.getSex();                   // displays gender
+pet.getName();                  // displays name
+</script>
+</head>
+</script>

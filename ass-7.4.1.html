@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function addSquares(a, b) {
+  function square(x) {
+    return x * x;
+  }
+  return square(a) + square(b);
+}
+a = addSquares(2, 3); // returns 13
+b = addSquares(3, 4); // returns 25
+c = addSquares(4, 5); // returns 41
+	docume.write(a);
+	docume.write(b);
+	docume.write(c);
+
+//the inner function forms a closure, you can call the outer function, specify arguments for both the outer and inner function
+	</script>
+	</head>
+</html>
